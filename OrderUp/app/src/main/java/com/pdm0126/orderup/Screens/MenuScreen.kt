@@ -19,7 +19,7 @@ import com.pdm0126.orderup.Dummy.Menu
 import com.pdm0126.orderup.ui.theme.OrderUpTheme
 
 @Composable
-fun MenuScreen(navOrden: () -> Unit){
+fun MenuScreen(){
     AppScaffold(title="OrderUp!") { padding ->
         LazyColumn(
             modifier = Modifier
@@ -30,11 +30,6 @@ fun MenuScreen(navOrden: () -> Unit){
             items(Menu){Producto ->
                 productoItem(Producto)
                 Spacer(modifier= Modifier.height(12.dp))
-            }
-            Button(onClick = {
-                navOrden()
-            }) {
-                Text("Realizar Compra")
             }
         }
     }
